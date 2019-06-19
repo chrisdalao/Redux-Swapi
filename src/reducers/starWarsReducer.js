@@ -5,7 +5,7 @@ import {
 } from "../actions";
 const initialState = {
   characters: [],
-  error: null,
+  error: "",
   fetching: false
   // Array characters, Boolean fetching, null error.
 };
