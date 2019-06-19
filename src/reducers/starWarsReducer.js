@@ -5,7 +5,7 @@ import {
 } from "../actions";
 const initialState = {
   characters: [],
-  error: "",
+  error: null,
   fetching: false
   // Array characters, Boolean fetching, null error.
 };
@@ -17,11 +17,10 @@ export const charsReducer = (state = initialState, action) => {
     case FETCH_CHARACTER_START:
       return {
         ...state,
-        error: "",
         fetching: true
       };
     case FETCH_CHARACTER_SUCCESS:
-      console.log(action);
+      console.log(action.type);
       return {
         ...state,
         fetching: false,

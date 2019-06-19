@@ -12,7 +12,6 @@ class CharacterListView extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     if (this.props.fetching) {
       // return something here to indicate that you are fetching data
     }
@@ -28,7 +27,6 @@ class CharacterListView extends React.Component {
 // the characters and the fetching boolean
 
 const mapStateToProps = state => {
-  console.log(state);
   return {
     characters: state.characters,
     fetching: state.fetching
