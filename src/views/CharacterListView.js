@@ -8,7 +8,7 @@ import { getCharacters } from "../actions";
 class CharacterListView extends React.Component {
   componentDidMount() {
     // call our action
-    this.getCharacters();
+    this.props.getCharacters();
   }
 
   render() {
@@ -28,8 +28,8 @@ class CharacterListView extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    characters: state.characters,
-    fetching: state.fetching
+    characters: state.charsReducer.characters,
+    fetching: state.charsReducer.fetching
   };
 };
 
