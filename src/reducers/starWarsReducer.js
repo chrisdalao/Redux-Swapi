@@ -5,7 +5,7 @@ import {
 } from "../actions";
 const initialState = {
   characters: [],
-  error: "",
+  error: null,
   fetching: false
   // Array characters, Boolean fetching, null error.
 };
@@ -29,7 +29,7 @@ export const charsReducer = (state = initialState, action) => {
       return {
         ...state,
         fetching: false,
-        error: "You have an error in Reducer!"
+        error: "You have an error!"
       };
     default:
       return state;
